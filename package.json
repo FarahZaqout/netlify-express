@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
   "dependencies": {
+    "@cellulant/checkout_encryption": "^1.0.4",
     "axios": "^0.27.2",
     "cors": "^2.8.5"
   },
