@@ -4,6 +4,7 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 const axios = require("axios");
+const cors = require("cors")
 
 const authUrl = "https://api-dev.tingg.africa/v1/oauth/token/request";
 const authBody = {
@@ -16,9 +17,9 @@ const authHeaders = {
     apiKey: "f02eTlHI1Rz2MkAiR64WgP05vVzctTd0",
 }
 
-
-
 const router = express.Router();
+
+app.use(cors());
 router.get('/', async (req, res) => {
   try {
     const response = await axios.post(authUrl, authBody, authHeaders);
