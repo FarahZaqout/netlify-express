@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
   try {
 
     const response = axios.post(authUrl, authBody, authHeaders);
-    return res.send(response);
+    return res.send({ response, authHeaders });
   } catch (e) {
     return res.send(e);
   }
